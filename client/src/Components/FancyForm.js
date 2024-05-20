@@ -59,30 +59,29 @@ const FancyForm = () => {
     return (
         <div className="form-container">
             <div className="form-wrapper">
-                <h2>{isSignIn ? 'Sign In' : 'Sign Up'}</h2>
-                <input
-                    type="text"
-                    placeholder="Username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
+                <div className="form-header">
+                    <h2>{isSignIn ? 'Sign In' : 'Sign Up'}</h2>
+                </div>
+                <div className="input-container">
+                    <input
+                        type="text"
+                        placeholder="Username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                    />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                </div>
                 <button onClick={isSignIn ? handleSignIn : handleSignUp}>
                     {isSignIn ? 'Sign In' : 'Sign Up'}
                 </button>
                 <p onClick={toggleForm}>
                     {isSignIn ? "Don't have an account? Sign Up" : 'Already have an account? Sign In'}
                 </p>
-                <div className="social-login">
-                    <p>Or sign in with:</p>
-                    <FaFacebook className="social-icon" />
-                    <FaGoogle className="social-icon" />
-                </div>
                 {message && <p className="message">{message}</p>}
             </div>
         </div>
