@@ -6,7 +6,8 @@ import (
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
-	"github.com/roylisto/gin-golang-react/api"
+	"github.com/saurabh/gin-golang-react/api"
+	"github.com/saurabh/gin-golang-react/api/config"
 )
 
 var (
@@ -16,6 +17,8 @@ var (
 func main() {
 	// Load ENV from .env file
 	err := godotenv.Load()
+	config.ConnectDatabase()
+
 	if err != nil {
 		panic("error loading .env file")
 	}

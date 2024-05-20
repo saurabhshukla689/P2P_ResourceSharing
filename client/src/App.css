@@ -2,6 +2,9 @@
   text-align: center;
 }
 
+.custom-navbar {
+  background-color:pink; /* Replace with your desired color */
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -23,6 +26,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 
 .App-link {
   color: #61dafb;

@@ -29,7 +29,7 @@ build-client:
 .PHONY: build-server
 build-server:
 	@echo "> Building the server binary ..."
-	@rm -rf bin && go build -o bin/${BIN_NAME} .
+	@rm -rf bin && go build -o bin/${BIN_NAME} 
 
 .PHONY: run
 run:

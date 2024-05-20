@@ -2,7 +2,7 @@ package api
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/roylisto/gin-golang-react/api/controller"
+	"github.com/saurabh/gin-golang-react/api/controller"
 )
 
 type Router interface {
@@ -27,5 +27,9 @@ func (r *router) SetupRouter(router *gin.Engine) {
 		v1 := api.Group("/v1")
 		// healthcheck
 		v1.GET("/healthcheck", healthController.Check)
+
+		v1.POST("/login", controller.Login)
+		v1.POST("/register", controller.Register)
+
 	}
 }
